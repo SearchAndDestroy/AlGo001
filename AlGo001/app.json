@@ -1,7 +1,7 @@
 ﻿{
     "id":  "cf0396d2-e8dd-4410-8f60-99df02183e45",
     "name":  "AlGo001",
-    "publisher":  "Me",
+    "publisher":  "ERPS",
     "version":  "1.0.0.0",
     "brief":  "",
     "description":  "",
@@ -21,7 +21,7 @@
     "idRanges":  [
                      {
                          "from":  50000,
-                         "to":  50999
+                         "to":  50100
                      }
                  ],
     "resourceExposurePolicy":  {

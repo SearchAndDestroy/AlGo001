@@ -10,6 +10,16 @@
                                "port":  7049,
                                "tenant":  "default",
                                "authentication":  "UserPassword"
+                           },
+                           {
+                               "type":  "al",
+                               "request":  "launch",
+                               "name":  "Local Sandbox (AlGoTest001)",
+                               "server":  "http://algotest001",
+                               "serverInstance":  "BC",
+                               "port":  7049,
+                               "tenant":  "default",
+                               "authentication":  "UserPassword"
                            }
                        ]
 }
