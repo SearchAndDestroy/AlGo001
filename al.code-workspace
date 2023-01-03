@@ -1,14 +1,16 @@
-{
+﻿{
     "folders":  [
                     {
                         "path":  ".AL-Go"
                     },
                     {
                         "path":  "AlGo001"
+                    },
+                    {
+                        "path":  "AlGo001.Test"
                     }
                 ],
-    "settings": {
-        "powershell.cwd": "c:\\DevOps\\AlGo001\\.AL-Go"
-
+    "settings":  {
+                     "powershell.cwd":  "c:\\DevOps\\AlGo001\\.AL-Go"
                  }
 }
