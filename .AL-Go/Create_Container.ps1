@@ -7,7 +7,7 @@
 #    [switch] $fromVSCode
 #)
 
-Start-Transcript
+#Start-Transcript
 $a=(wmic OS Get localdatetime)[2]
 $b=$a.Substring(0,8) # Get the yyyyMMdd part
 $c=$a.Substring(8,6) # Get the HHmmss part
@@ -42,7 +42,7 @@ foreach ($licenseFile in $licenseFiles) {
 
 if ($null -eq $licenseFileName){
     Write-Host -ForegroundColor Red No Valid Licences Found. Aborting...
-    Stop-Transcript
+#    Stop-Transcript
     exit
 } else {
     Write-Host -ForegroundColor Green Using [$licenseFileName] expiring on [$expdate]
@@ -51,4 +51,4 @@ if ($null -eq $licenseFileName){
 $contName = "AlGoTest001"
 
 .\localDevEnv.ps1 -containerName $contName -auth UserPassword -credential $credNAV -licenseFileUrl $licenseFileName
-Stop-Transcript
+#Stop-Transcript
