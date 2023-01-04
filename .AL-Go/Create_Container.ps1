@@ -52,3 +52,7 @@ $contName = "AlGoTest001"
 
 .\localDevEnv.ps1 -containerName $contName -auth UserPassword -credential $credNAV -licenseFileUrl $licenseFileName
 #Stop-Transcript
+
+# Senario 8
+# https://github.com/microsoft/AL-Go/blob/main/Scenarios/CreateOnlineDevEnv.md
+# ERPS-Sandbox
