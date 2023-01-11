@@ -20,7 +20,7 @@ $Second=$c.substring(4,2)
 $today=$year+"/"+$month+"/"+$day+" "+$hour+":"+$Minute+":"+$Second
 #>
 
-C:\DevOps\AlGo001\.AL-Go\cloudDevEnv.ps1 -environmentName QA -reuseExistingEnvironment Yes
+C:\DevOps\AlGo001\.AL-Go\cloudDevEnv.ps1 -environmentName QA -reuseExistingEnvironment $true
 # Senario 3
 # https://github.com/microsoft/AL-Go/blob/main/Scenarios/RegisterSandboxEnvironment.md
 # QA
