@@ -22,7 +22,7 @@
                                "request":  "launch",
                                "name":  "Cloud Sandbox (erps-sandbox)",
                                "environmentType":  "Sandbox",
-                               "environmentName":  "erps-sandbox"
+                               "environmentName":  "qa"
                            }
                        ]
 }

@@ -1,9 +1,12 @@
-#Param(
-#    [string] $environmentName = "",
-#    [bool] $reuseExistingEnvironment,
-#    [switch] $fromVSCode
-#)
+<#
+param(
+    [string] $environmentName = "",
+    [bool] $reuseExistingEnvironment,
+    [switch] $fromVSCode
+)
+#>
 
+<#
 $a=(wmic OS Get localdatetime)[2]
 $b=$a.Substring(0,8) # Get the yyyyMMdd part
 $c=$a.Substring(8,6) # Get the HHmmss part
@@ -15,6 +18,7 @@ $Minute=$c.substring(2,2)
 $Second=$c.substring(4,2)
 #$today=get-date -Year $Year -Month $Month -Day $Day -Hour $Hour -Minute $Minute -Second $Second
 $today=$year+"/"+$month+"/"+$day+" "+$hour+":"+$Minute+":"+$Second
+#>
 
 C:\DevOps\AlGo001\.AL-Go\cloudDevEnv.ps1 -environmentName QA -reuseExistingEnvironment Yes
 # Senario 3
