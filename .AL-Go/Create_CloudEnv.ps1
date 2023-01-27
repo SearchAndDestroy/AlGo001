@@ -6,6 +6,10 @@ param(
 )
 #>
 
+param(
+    [bool] $reuseExistingEnvironment
+)
+
 <#
 $a=(wmic OS Get localdatetime)[2]
 $b=$a.Substring(0,8) # Get the yyyyMMdd part
@@ -20,8 +24,8 @@ $Second=$c.substring(4,2)
 $today=$year+"/"+$month+"/"+$day+" "+$hour+":"+$Minute+":"+$Second
 #>
 
-C:\DevOps\AlGo001\.AL-Go\cloudDevEnv.ps1 -environmentName QA -reuseExistingEnvironment $true
+C:\DevOps\AlGo001\.AL-Go\cloudDevEnv.ps1 -environmentName QA -reuseExistingEnvironment $reuseExistingEnvironment
 # Senario 3
 # https://github.com/microsoft/AL-Go/blob/main/Scenarios/RegisterSandboxEnvironment.md
 # QA
-# Deploy to Env => No Company
+# Deploy to Env => No permission
