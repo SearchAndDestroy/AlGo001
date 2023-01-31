@@ -22,7 +22,7 @@ $Second=$c.substring(4,2)
 $today=$year+"/"+$month+"/"+$day+" "+$hour+":"+$Minute+":"+$Second
 #>
 
-$today=get-date -format "yyyymmdd-HHMMss"
+$today=get-date -format "yyyymmdd HHMMss"
 $username1 = "test"
 $password1 = ConvertTo-SecureString "Password2023" -AsPlainText -Force
 $credNAV = New-Object System.Management.Automation.PSCredential -ArgumentList ($username1, $password1)
