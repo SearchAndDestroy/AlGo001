@@ -1,4 +1,4 @@
-﻿name: ' Create Online Dev. Environment'
+name: ' Create Online Dev. Environment'
 
 on:
   workflow_dispatch:
@@ -21,7 +21,11 @@ permissions:
 
 defaults:
   run:
-    shell: pwsh
+    shell: powershell
+
+env:
+  ALGoOrgSettings: ${{ vars.ALGoOrgSettings }}
+  ALGoRepoSettings: ${{ vars.ALGoRepoSettings }}
 
 jobs:
   CreateOnlineDevelopmentEnvironment:
