@@ -45,7 +45,7 @@ concurrency: release
 
 defaults:
   run:
-    shell: PowerShell
+    shell: pwsh
 
 jobs:
   Initialization:
