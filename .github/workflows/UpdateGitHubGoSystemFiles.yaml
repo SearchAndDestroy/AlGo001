@@ -1,4 +1,4 @@
-﻿name: ' Update AL-Go System Files'
+name: ' Update AL-Go System Files'
 
 on:
   workflow_dispatch:
@@ -17,7 +17,11 @@ permissions:
 
 defaults:
   run:
-    shell: pwsh
+    shell: powershell
+
+env:
+  ALGoOrgSettings: ${{ vars.ALGoOrgSettings }}
+  ALGoRepoSettings: ${{ vars.ALGoRepoSettings }}
 
 jobs:
   UpdateALGoSystemFiles:

@@ -1,4 +1,4 @@
-﻿name: 'Create a new app'
+name: 'Create a new app'
 
 on:
   workflow_dispatch:
@@ -31,7 +31,11 @@ permissions:
 
 defaults:
   run:
-    shell: pwsh
+    shell: powershell
+
+env:
+  ALGoOrgSettings: ${{ vars.ALGoOrgSettings }}
+  ALGoRepoSettings: ${{ vars.ALGoRepoSettings }}
 
 jobs:
   CreateApp:

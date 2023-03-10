@@ -1,4 +1,4 @@
-﻿name: ' Create release'
+name: ' Create release'
 
 on:
   workflow_dispatch:
@@ -45,7 +45,11 @@ concurrency: release
 
 defaults:
   run:
-    shell: pwsh
+    shell: powershell
+
+env:
+  ALGoOrgSettings: ${{ vars.ALGoOrgSettings }}
+  ALGoRepoSettings: ${{ vars.ALGoRepoSettings }}
 
 jobs:
   CreateRelease:
