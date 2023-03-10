@@ -1,11 +1,13 @@
-#Param(
-#    [string] $containerName = "",
-#    [string] $auth = "",
-#    [pscredential] $credential = $null,
-#    [string] $licenseFileUrl = "",
-#    [string] $insiderSasToken = "",
-#    [switch] $fromVSCode
-#)
+<#
+Param(
+    [string] $containerName = "",
+    [string] $auth = "",
+    [pscredential] $credential = $null,
+    [string] $licenseFileUrl = "",
+    [string] $insiderSasToken = "",
+    [switch] $fromVSCode
+)
+#>
 
 #Start-Transcript
 <#
@@ -28,18 +30,19 @@ $password1 = ConvertTo-SecureString "Password2023" -AsPlainText -Force
 $credNAV = New-Object System.Management.Automation.PSCredential -ArgumentList ($username1, $password1)
 
 $basePath = $env:USERPROFILE # Path were the license files are
-$licenseFiles = Get-ChildItem -Path (join-path $basePath ".docker\*.flf")
+$licenseFiles = Get-ChildItem -Path (join-path $basePath ".docker\*")  -Include *.bclicense, *.flf
 foreach ($licenseFile in $licenseFiles) {
     $licExp = (Select-String -Path $licenseFile -Pattern "Expires").ToString()
     [datetime]$licExpDate = $licExp.Substring($licExp.LastIndexOf(":")+2)
-        if ($licExpDate -gt $today) {
+    if ($licExpDate -gt $today) {
         $licenseFileName = $licenseFile.FullName
         $expDate = $licExpDate.ToLongDateString()
 		write-host -ForegroundColor Yellow [licExpDate=$licExpDate][today=$today][isValid=$isValid][licenseFileName=$licenseFileName]
     } else {
+        Write-Host [$licenseFile] [Expired on:$licExpDate]
         $expPath = join-path $basePath ".docker\Expired"
         if (!(Test-Path -Path $expPath)) { mkdir $expPath }
-        Move-Item $licenseFile -Destination $expPath
+        #Move-Item $licenseFile -Destination $expPath
     }
 }
 
@@ -53,7 +56,7 @@ if ($null -eq $licenseFileName){
 
 $contName = "AlGoTest001"
 
-.\localDevEnv.ps1 -containerName $contName -auth UserPassword -credential $credNAV -licenseFileUrl $licenseFileName
+C:\DevOps\AlGo001\.AL-Go\localDevEnv.ps1 -containerName $contName -auth UserPassword -credential $credNAV -licenseFileUrl $licenseFileName
 #Stop-Transcript
 
 # Senario 8

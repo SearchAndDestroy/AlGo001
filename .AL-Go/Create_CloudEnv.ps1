@@ -28,4 +28,4 @@ C:\DevOps\AlGo001\.AL-Go\cloudDevEnv.ps1 -environmentName QA -reuseExistingEnvir
 # Senario 3
 # https://github.com/microsoft/AL-Go/blob/main/Scenarios/RegisterSandboxEnvironment.md
 # QA
-# Deploy to Env => No permission
+# Need to add the QA App in BC
