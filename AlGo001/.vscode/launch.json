@@ -34,6 +34,13 @@
       "name": "Cloud Sandbox (QA)",
       "environmentType": "Sandbox",
       "environmentName": "QA"
+    },
+    {
+      "type": "al",
+      "request": "launch",
+      "name": "Cloud Sandbox (MYPROD_Production)",
+      "environmentType": "Sandbox",
+      "environmentName": "MYPROD_Production"
     }
   ]
 }
